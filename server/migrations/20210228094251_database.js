@@ -8,8 +8,8 @@ exports.up = function (knex) {
       table.string('email').unique().notNull();
     }),
 
-    // Tickets
-    knex.schema.createTable('tickets', table => {
+    // Tasks
+    knex.schema.createTable('tasks', table => {
       table.increments('id').primary();
       table.string('title').notNull();
       table.string('description').notNull();
@@ -24,7 +24,7 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
   return Promise.all([
-    knex.schema.dropTableIfExists('tickets'),
+    knex.schema.dropTableIfExists('tasks'),
     knex.schema.dropTableIfExists('users'),
   ]);
 };
