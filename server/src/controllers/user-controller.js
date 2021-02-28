@@ -1,6 +1,6 @@
 'use strict';
 
-const User = require('../model/User');
+const User = require('../models/User');
 const md5 = require('crypto-js/md5');
 const CustomError = require('../utils/CustomError');
 const s = require('http-status');

@@ -3,7 +3,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const errorHandler = require('./src/middleware/error-handler');
+const errorHandler = require('./src/middlewares/error-handler');
 const router = require('./src/routes');
 require('./knex');
 

@@ -2,8 +2,8 @@
 
 const express = require('express');
 const validator = require('express-joi-validation');
-const asyncHandler = require('../middleware/async-handler');
-const { register, login } = require('../controller/user-controller');
+const asyncHandler = require('../middlewares/async-handler');
+const { register, login } = require('../controllers/user-controller');
 const { registerSchema, loginSchema } = require('../validation/user');
 
 const router = express.Router();

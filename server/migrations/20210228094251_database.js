@@ -12,7 +12,7 @@ exports.up = function (knex) {
     knex.schema.createTable('tickets', table => {
       table.increments('id').primary();
       table.string('title').notNull();
-      table.string('text').notNull();
+      table.string('description').notNull();
       table.integer('authorID').notNull();
       table.enu('status', ['TODO', 'IN_PROGRESS', 'DONE']).defaultTo('TODO').notNull();
 
