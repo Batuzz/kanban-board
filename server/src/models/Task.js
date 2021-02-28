@@ -15,7 +15,7 @@ class Task extends Model {
         relation: Model.BelongsToOneRelation,
         modelClass: __dirname + '/User',
         join: {
-          from: 'posts.authorID',
+          from: 'tasks.authorID',
           to: 'users.id',
         }
       },

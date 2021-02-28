@@ -23,7 +23,7 @@ const updateTaskSchema = Joi.object({
     .max(255)
     .required(),
   status: Joi.string()
-    .valid(['TODO', 'IN_PROGRESS', 'DONE'])
+    .valid('TODO', 'IN_PROGRESS', 'DONE')
     .required(),
 });
 
