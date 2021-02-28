@@ -33,7 +33,7 @@ async function getByID(req, res) {
   return res.send(task);
 }
 
-async function edit(req, res) {
+async function update(req, res) {
   const { id } = req.params;
   const { description, title, status } = req.body;
   const { id: authorID } = req.user;
@@ -86,6 +86,6 @@ module.exports = {
   create,
   getByID,
   getAll,
-  edit,
+  update,
   deleteByID,
 }
